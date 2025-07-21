@@ -1,6 +1,7 @@
 body{
     background-color: rgb(80, 19, 19);
     margin: 0px;
+    max-width: 100%;
   }
   .main{
     background-color: red;
@@ -50,7 +51,39 @@ body{
     border: none;
     cursor: pointer;
   }
-  .name{
-    margin-top: 100px;
-    margin-left: 100px;
+  .sname{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: medium;
   }
+  #img{
+    display: none;
+  }
+@media (max-width: 600px){
+  .main{
+    width: auto;
+    height: 40px;
+    font-size: 13px;
+  }
+  .main #name{
+    margin-left: 10px;
+  }
+  .sname{
+    font-size: 15px;
+  }
+  .vid{
+    margin-top: 10px;
+  }
+  .vid img{
+    display: none;
+  }
+  iframe{
+    width: 460px;
+    height: 240px;
+  }
+  #img{
+    width: 170px;
+    height: 270px;
+    display: flex;
+  }
+}
