@@ -1,0 +1,43 @@
+body{
+  background-color: rgb(80, 19, 19);
+  margin: 0px;
+}
+.main{
+  background-color: red;
+  height: 50px;
+  align-items: center;
+  text-align: left;
+  padding: 5px 10px;
+  font-size: 20px;
+  height: 80px;
+  box-shadow: 5px 5px 30px grey;
+  display: flex;
+  justify-content: space-between;
+}
+.main #name{
+  font-family: fantasy;
+  margin-left: 40px;
+  text-decoration: none;
+  color: black;
+  text-shadow: 5px 5px 10px grey;
+}
+#name{
+  text-decoration: none;
+}
+.section1{
+ color: antiquewhite;
+ margin-left: 50px;
+}
+#gaddar{
+  width: 270px;
+  height: 370px;
+  border-radius: 10px;
+}
+#gaddar:hover{
+  width: 290px;
+  height: 390px;
+  box-shadow: 7px 7px 15px white;
+}
+.vid img{
+  padding-right: 300px;
+}
