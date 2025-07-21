@@ -41,3 +41,21 @@ body{
 .vid img{
   padding-right: 300px;
 }
+@media (max-width: 600px){
+  .main{
+    width: auto;
+    height: 40px;
+    font-size: 15px;
+  }
+  .main #name{
+    margin-left: 15px;
+  }
+  .section1{
+    font-size: 15px;
+    margin-left: 25px;
+  }
+  #gaddar{
+    width: 150px;
+    height: 250px;
+  }
+}
