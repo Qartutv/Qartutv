@@ -41,6 +41,17 @@ body{
 .vid img{
   padding-right: 300px;
 }
+#dehat:hover{
+  width: 290px;
+  height: 390px;
+  box-shadow: 7px 7px 15px white;
+}
+#dehat{
+  width: 270px;
+  height: 370px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
 @media (max-width: 600px){
   .main{
     width: auto;
@@ -52,10 +63,25 @@ body{
   }
   .section1{
     font-size: 15px;
-    margin-left: 25px;
+    margin-left: 30px;
   }
   #gaddar{
     width: 150px;
     height: 250px;
+  }
+  #dehat{
+    width: 150px;
+    height: 250px;
+    margin-left: 15px;
+  }
+  #dehat:hover{
+    width: 170px;
+    height: 270px;
+    box-shadow: 7px 7px 15px white;
+  }
+  #gaddar:hover{
+    width: 170px;
+    height: 270px;
+    box-shadow: 7px 7px 15px white;
   }
 }
