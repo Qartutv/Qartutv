@@ -75,13 +75,13 @@ body{
     margin-left: 15px;
   }
   #dehat:hover{
-    width: 170px;
-    height: 270px;
+    width: 160px;
+    height: 260px;
     box-shadow: 7px 7px 15px white;
   }
   #gaddar:hover{
-    width: 170px;
-    height: 270px;
+    width: 160px;
+    height: 260px;
     box-shadow: 7px 7px 15px white;
   }
 }
