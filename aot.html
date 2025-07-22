@@ -1,33 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QartuTv</title>
-    <link rel="stylesheet" href="aot.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9345691273796531"
-     crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QartuTv | Attack on Titan</title>
+  <link rel="stylesheet" href="aot.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9345691273796531"
+    crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main">
-        <a href="index.html" id="name"><h2>QartuTv</h2></a>
-    </div>
-    <div class="sname">
-        <h2 id="namet">ტიტანებზე შეტევა/ATTACK ON TITANS</h2>
-        <div class="mobdiv">
-            <img src="https://adjaranets.to/uploads/posts/2024-05/medium/htp1dtlgfamjfu8wqjnuqdp1n4i.jpg" width="270px" height="370px" id="img">
-            <select id="mobsel">
-                <option value="1" href="gaddar.html" >სერია 1</option>
-            </select>
+  <!-- Header -->
+  <header class="main">
+    <a href="index.html" id="name"><h2>QartuTv</h2></a>
+  </header>
+
+  <!-- Episode Section -->
+  <section class="episode-container">
+    <!-- Left Side: Poster + Info -->
+    <div class="episode-info">
+      <h1 class="episode-title">ტიტანებზე შეტევა / Attack on Titan</h1>
+      <div class="poster-box">
+        <img src="https://adjaranets.to/uploads/posts/2024-05/medium/htp1dtlgfamjfu8wqjnuqdp1n4i.jpg" alt="AOT Poster" />
+        <div class="episode-meta">
+          <span class="year-badge">2013</span>
+          <span class="lang-badge">DUB</span>
         </div>
+      </div>
     </div>
-    <div class="vid">
-        <img src="https://adjaranets.to/uploads/posts/2024-05/medium/htp1dtlgfamjfu8wqjnuqdp1n4i.jpg" width="270px" height="370px">
-        <iframe width="960" height="540" src="https://adjaraneti.xyz/v/t6hqro9e76z2" frameborder="0" allowfullscreen="true"></iframe>
-        <select>
-            <option value="1" href="deha.html" >სერია 1</option>
+
+    <!-- Right Side: Video Player -->
+    <div class="episode-player">
+      <div class="player-wrapper">
+        <iframe
+          src="https://adjaraneti.xyz/v/t6hqro9e76z2"
+          allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
+        <select class="episode-select overlay" id="seriesSelector">
+          <option value="1" selected>სერია 1</option>
+          <!-- Add more episodes as needed -->
         </select>
+      </div>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 QartuTv. ყველა უფლება დაცულია.</p>
+    <p><a href="index.html">მთავარი გვერდი</a></p>
+  </footer>
 </body>
 </html>

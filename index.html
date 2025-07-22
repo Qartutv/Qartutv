@@ -1,26 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QartuTv</title>
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9345691273796531"
-     crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QartuTv – სერიალები და ანიმეები</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9345691273796531"
+    crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main">
-        <a href="index.html" id="name"><h2>QartuTv</h2></a>
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" id="site-name">QartuTv</a>
     </div>
-    <div class="section1">
-        <h2>სერიალები</h2>
-        <a href="gaddar.html"><img src="https://uyure.net/img/2204.webp" id="gaddar"></a>
-        <a href="deha.html"><img src="https://uyure.net/img/2079.webp" id="dehat"></a>
+  </header>
+  <main class="container">
+    <!-- 🔍 Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="ძიება სერიალების ან ანიმეების..." />
     </div>
-    <div class="section2">
-        <h2>ანიმეები</h2>
-        <a href="aot.html"><img src="https://adjaranets.to/uploads/posts/2024-05/medium/htp1dtlgfamjfu8wqjnuqdp1n4i.jpg" id="aot"></a>    
+
+  <section class="section" id="series">
+    <h2 class="section-title">📺 სერიალები</h2>
+    <div class="card-grid" id="seriesGrid">
+      <a href="gaddar.html" class="card" data-title="gaddar">
+        <span class="card-year">2024</span>
+        <span class="card-count">1 / 80</span> 
+        <span class="card-lang">SUB</span>
+        <img src="https://uyure.net/img/2204.webp" alt="Gaddar სერიალი" />
+        <span class="card-title">Gaddar</span>
+      </a>
+      <a href="deha.html" class="card" data-title="deha">
+        <span class="card-year">2024</span>
+        <span class="card-count">1 / 124</span> 
+        <span class="card-lang">DUB</span>
+        <img src="https://uyure.net/img/2079.webp" alt="Deha სერიალი" />
+        <span class="card-title">Deha</span>
+      </a>
     </div>
+  </section>
+
+    <section class="section" id="anime">
+      <h2 class="section-title">🎥 ანიმეები</h2>
+      <div class="card-grid">
+        <a href="aot.html" class="card" data-title="attack on titan aot">
+            <span class="card-year">2013</span>
+            <span class="card-count">1 / 94</span> 
+            <span class="card-lang">DUB</span>
+            <img src="https://adjaranets.to/uploads/posts/2024-05/medium/htp1dtlgfamjfu8wqjnuqdp1n4i.jpg" alt="Attack on Titan" />
+            <span class="card-title">Attack on Titan</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 QartuTv. ყველა უფლება დაცულია.</p>
+    </div>
+  </footer>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const allSections = document.querySelectorAll('.section');
+  
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase().trim();
+      let totalVisible = 0; // Track if anything at all matches
+  
+      allSections.forEach(section => {
+        const cards = section.querySelectorAll('.card');
+        let visibleCount = 0;
+  
+        cards.forEach(card => {
+          const title = card.getAttribute('data-title')?.toLowerCase() || '';
+          if (title.includes(query)) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+  
+        // Show or hide section based on how many cards matched
+        section.style.display = visibleCount > 0 ? 'block' : 'none';
+        totalVisible += visibleCount;
+      });
+  
+      // Optional: "No results found" message
+      const noResults = document.getElementById('noResults');
+      if (noResults) {
+        noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+      }
+    });
+  </script>
+  
 </body>
 </html>

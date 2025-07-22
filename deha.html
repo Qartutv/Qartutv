@@ -1,33 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QartuTv</title>
-    <link rel="stylesheet" href="deha.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9345691273796531"
-     crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QartuTv | Deha</title>
+  <link rel="stylesheet" href="deha.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9345691273796531"
+    crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main">
-        <a href="index.html" id="name"><h2>QartuTv</h2></a>
-    </div>
-    <div class="sname">
-        <h2 id="namet">გენიოსი/DEHA</h2>
-        <div class="mobdiv">
-            <img src="https://uyure.net/img/2079.webp" width="270px" height="370px" id="img">
-            <select id="mobsel">
-                <option value="1" href="gaddar.html" >სერია 1</option>
-            </select>
+  <!-- Navbar -->
+  <header class="main">
+    <a href="index.html" id="name"><h2>QartuTv</h2></a>
+  </header>
+
+  <!-- Episode Section -->
+  <section class="episode-container">
+    <!-- Left: Poster + Info -->
+    <div class="episode-info">
+      <h1 class="episode-title">გენიოსი / Deha</h1>
+      <div class="poster-box">
+        <img src="https://uyure.net/img/2079.webp" alt="Deha Poster" />
+        <div class="episode-meta">
+          <span class="year-badge">2024</span>
+          <span class="lang-badge">DUB</span>
         </div>
+      </div>
     </div>
-    <div class="vid">
-        <img src="https://uyure.net/img/2079.webp" width="270px" height="370px">
-        <iframe src="https://vkvideo.ru/video_ext.php?oid=824626030&id=456239029&hd=2&autoplay=1" width="960" height="540" allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
-        <select>
-            <option value="1" href="deha.html" >სერია 1</option>
+
+    <!-- Right: Video -->
+    <div class="episode-player">
+      <div class="player-wrapper">
+        <iframe id="iframedisplay"
+          src="https://vkvideo.ru/video_ext.php?oid=824626030&id=456239029&hd=2&autoplay=1"
+          allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+          frameborder="0" allowfullscreen>
+        </iframe>
+
+        <select class="episode-select overlay" id="seriesSelector">
+          <option value="1" selected>სერია 1</option>
+          <!-- Add more episodes here -->
         </select>
+      </div>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 QartuTv. ყველა უფლება დაცულია.</p>
+    <p><a href="index.html">მთავარი გვერდი</a></p>
+  </footer>
 </body>
 </html>
