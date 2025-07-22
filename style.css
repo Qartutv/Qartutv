@@ -52,6 +52,21 @@ body{
   border-radius: 10px;
   margin-left: 10px;
 }
+.section2{
+  color: antiquewhite;
+  margin-left: 50px;
+ }
+ #Naruto:hover{
+  width: 290px;
+  height: 390px;
+  box-shadow: 7px 7px 15px white;
+}
+#Naruto{
+  width: 270px;
+  height: 370px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
 @media (max-width: 600px){
   .main{
     width: auto;
