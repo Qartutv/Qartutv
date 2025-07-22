@@ -56,16 +56,15 @@ body{
   color: antiquewhite;
   margin-left: 50px;
  }
- #Naruto:hover{
+ #aot:hover{
   width: 290px;
   height: 390px;
   box-shadow: 7px 7px 15px white;
 }
-#Naruto{
+#aot{
   width: 270px;
   height: 370px;
   border-radius: 10px;
-  margin-left: 10px;
 }
 @media (max-width: 600px){
   .main{
@@ -99,19 +98,14 @@ body{
     height: 260px;
     box-shadow: 7px 7px 15px white;
   }
-  
-  .section2{
-    font-size: 15px;
-    margin-left: 30px;
-  }
-    #ali{
-    width: 150px;
-    height: 250px;
-    margin-left: 15px;
-  }
-  #ali:hover{
+  #aot:hover{
     width: 160px;
     height: 260px;
     box-shadow: 7px 7px 15px white;
+  }
+  #aot{
+    width: 150px;
+    height: 250px;
+    margin-left: 15px;
   }
 }
