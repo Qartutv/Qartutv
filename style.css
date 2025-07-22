@@ -98,6 +98,10 @@ body{
     height: 260px;
     box-shadow: 7px 7px 15px white;
   }
+  .section2{
+    font-size: 15px;
+    margin-left: 30px;
+  }
   #aot:hover{
     width: 160px;
     height: 260px;
