@@ -6,6 +6,14 @@ body {
   color: antiquewhite;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
 
 html {
   width: 100%;
@@ -35,6 +43,7 @@ html {
 }
 /* Main Layout */
 .episode-container {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,31 +111,17 @@ iframe {
   box-shadow: 0 0 25px black;
 }
 
-/* Select Dropdown */
-.episode-select {
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 12px;
-  background-color: yellow;
-  color: black;
-  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
-  transition: transform 0.2s;
-  cursor: pointer;
-  margin-top: 12px;
-}
-
-.episode-select:hover {
-  transform: scale(1.05);
-}
-
-/* Overlay Dropdown in Player */
-.episode-select.overlay {
+.custom-dropdowns {
   position: absolute;
   top: 15px;
   right: 15px;
-  z-index: 5;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.dropdown-button {
   background-color: yellow;
   color: black;
   font-weight: bold;
@@ -134,13 +129,50 @@ iframe {
   padding: 6px 12px;
   border-radius: 12px;
   border: none;
-  box-shadow: 0 0 8px rgba(255, 255, 0, 0.7);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 0, 0.7);
+}
+.dropdown-list::-webkit-scrollbar {
+  width: 8px;
+  color: rgb(255, 255, 0);
+}
+.dropdown-list::-webkit-scrollbar-track {
+  background: #333; /* dark background */
+  border-radius: 10px;
+}
+.dropdown-list::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 10px;
+  border: 2px solid #333; /* optional border for contrast */
 }
 
-.episode-select.overlay:hover {
-  transform: scale(1.05);
+.dropdown-list {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  background-color: yellow;
+  color: black;
+  list-style: none;
+  padding: 0;
+  border-radius: 12px;
+  max-height: 160px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+  width: 150px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(75, 75, 0) #333;
+}
+
+.dropdown-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-list li:hover {
+  background-color: black;
+  color: yellow;
 }
 
 .player-wrapper {
@@ -159,7 +191,6 @@ footer.footer {
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
-  margin-top: auto;
 }
 
 footer a {
@@ -200,3 +231,44 @@ footer a:hover {
     font-size: 22px;
   }
 }
+
+@media (max-width: 768px) {
+  .custom-dropdowns {
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  .dropdown-button {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: 120px;
+  }
+
+  .dropdown-list {
+    width: 120px;
+    font-size: 13px;
+    max-height: 120px;
+  }
+
+  .dropdown-list li {
+    padding: 6px 10px;
+  }
+
+  /* Smaller scrollbar for mobile */
+  .dropdown-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .dropdown-list::-webkit-scrollbar-thumb {
+    background-color: yellow;
+    border-radius: 6px;
+  }
+
+  .dropdown-list::-webkit-scrollbar-track {
+    background-color: #222;
+  }
+}
+

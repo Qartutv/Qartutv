@@ -1,18 +1,91 @@
-document.getElementById('seriesSelector').addEventListener('change', function () {
-    const selectedValue = this.value;
+document.addEventListener("DOMContentLoaded", function () {
+  const seasonToggle = document.getElementById("seasonToggle");
+  const episodeToggle = document.getElementById("episodeToggle");
+  const seasonList = document.getElementById("seasonList");
+  const episodeList = document.getElementById("episodeList");
+  const iframe = document.getElementById("iframedisplay");
 
-    if (selectedValue === "1") {
-        document.getElementById('iframedisplay').src = "https://mykadricdn.online/v/tqe3y32l94aw";
-    } else if (selectedValue === "2") {
-        // ✅ Redirect the entire page
-        document.getElementById('iframedisplay').src = "https://mykadricdn.online/v/6m83fcyeb7r5";
-    } else if (selectedValue == "3") {
-        document.getElementById('iframedisplay').src = "https://mykadricdn.online/v/gh5iz7btc0dr";
-    } else if (selectedValue == "4") {
-        document.getElementById('iframedisplay').src = "https://mykadricdn.online/v/2ajoh2dv4hhg";
-    } else if (selectedValue == "5") {
-        document.getElementById('iframedisplay').src = "https://mykadricdn.online/v/9heapfh0hdnd";
-    } else if (selectedValue == "6") {
-        document.getElementById('iframedisplay').src = "https://mykadricdn.online/v/f5hiyymlew5x";
+  let currentSeason = 1;
+
+  // Replace with your real links
+  const episodeSources = {
+    1: {
+      1: "https://mykadricdn.online/v/tqe3y32l94aw",
+      2: "https://mykadricdn.online/v/6m83fcyeb7r5",
+      3: "https://mykadricdn.online/v/gh5iz7btc0dr",
+      4: "https://mykadricdn.online/v/2ajoh2dv4hhg",
+      5: "https://mykadricdn.online/v/9heapfh0hdnd",
+      6: "https://mykadricdn.online/v/f5hiyymlew5x",
+      7: "https://mykadricdn.online/v/7hbbd4h3hd1q",
+      8: "https://mykadricdn.online/v/es78xefuaj5o",
+      9: "https://mykadricdn.online/v/fpfz46yloce6",
+      10: "https://mykadricdn.online/v/4yw8msvq5rta",
+      11: "https://mykadricdn.online/v/1n4qi3rthyvs",
+      12: "https://mykadricdn.online/v/ulnyqczgs9kj"
+    },
+    2: {
+      1: "https://mykadricdn.online/v/568dkmstrztr"
     }
+  };
+
+  function populateEpisodes(season) {
+    episodeList.innerHTML = "";
+    const episodes = episodeSources[season];
+    if (!episodes) return;
+
+    Object.keys(episodes).forEach((epNum) => {
+      const li = document.createElement("li");
+      li.textContent = `სერია ${epNum}`;
+      li.dataset.episode = epNum;
+      episodeList.appendChild(li);
+    });
+
+    episodeToggle.textContent = "აირჩიე სერია";
+  }
+
+  // Toggle dropdown visibility
+  seasonToggle.addEventListener("click", () => {
+    seasonList.style.display = seasonList.style.display === "block" ? "none" : "block";
+    episodeList.style.display = "none";
+  });
+
+  episodeToggle.addEventListener("click", () => {
+    episodeList.style.display = episodeList.style.display === "block" ? "none" : "block";
+    seasonList.style.display = "none";
+  });
+
+  // Handle season selection
+  seasonList.addEventListener("click", (e) => {
+    if (e.target.tagName === "LI") {
+      const season = e.target.dataset.season;
+      currentSeason = season;
+      seasonToggle.textContent = `სეზონი ${season}`;
+      seasonList.style.display = "none";
+      populateEpisodes(season);
+    }
+  });
+
+  // Handle episode selection
+  episodeList.addEventListener("click", (e) => {
+    if (e.target.tagName === "LI") {
+      const episode = e.target.dataset.episode;
+      const url = episodeSources[currentSeason][episode];
+      if (url) {
+        iframe.src = url;
+        episodeToggle.textContent = `სერია ${episode}`;
+      }
+      episodeList.style.display = "none";
+    }
+  });
+
+  // Close if clicked outside
+  document.addEventListener("click", (e) => {
+    if (!document.querySelector(".custom-dropdowns").contains(e.target)) {
+      seasonList.style.display = "none";
+      episodeList.style.display = "none";
+    }
+  });
+
+  // Initialize default season
+  populateEpisodes(currentSeason);
 });
