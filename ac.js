@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Replace with your real links
     const episodeSources = {
       1: {
-        1: "https://filemoon.to/e/haffk9k3ozyc/All_Out!!_Ep__1.mp4",
+        1: "https://www.youtube.com/embed/pRnPUAfXbmc?si=A18FiOJKBeOlSYN5",
       },
       2: {
         1: "https://mykadricdn.online/v/568dkmstrztr"
