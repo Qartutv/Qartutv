@@ -26,7 +26,6 @@ body {
   font-family: fantasy;
   color: black;
   text-shadow: 2px 2px 5px gray;
-  margin: 0;
 }
 #name,
 #name h2 {
@@ -184,6 +183,34 @@ footer a {
 .footer a:hover {
   text-decoration: underline;
   color: white;
+}
+
+.facebook-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1877f2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.facebook-link:hover {
+  text-decoration: underline;
+  text-decoration: none;
+  text-shadow: 2px 2px 10px#1877f2;
+}
+
+.footer .facebook-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1877f2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer .facebook-link:hover {
+  text-decoration: underline;
+  text-decoration: none;
+  text-shadow: 2px 2px 10px#1877f2;
 }
 
 @media (max-width: 768px) {
