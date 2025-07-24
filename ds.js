@@ -56,6 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
         16: "https://mykadricdn.online/v/wvere5h9ko7q",
         17: "https://mykadricdn.online/v/47jh303b7i1o",
         18: "https://mykadricdn.online/v/4zee390wqfm4",
+      },
+      3: {
+        1: "https://mykadricdn.online/v/pyeem1bpin0v",
+        2: "https://mykadricdn.online/v/d3y7qvvjgs6l",
+        3: "https://mykadricdn.online/v/ggp90gbx02nl",
+        4: "https://mykadricdn.online/v/5ib9k1p68vke",
+        5: "https://mykadricdn.online/v/8kucvrlkpe10",
+        6: "https://mykadricdn.online/v/qseuppvmo0c9",
+        7: "https://mykadricdn.online/v/y6cewyoy9ns5",
+        8: "https://mykadricdn.online/v/3qb8f6e5nshm",
+        9: "https://mykadricdn.online/v/03k03b0scb0p",
+        10: "https://mykadricdn.online/v/c0wtuefr82lb",
+        11: "https://mykadricdn.online/v/7bk6fb8ysp0h",
+      },
+      4: {
+        1: "https://mykadricdn.online/embed/kmhefjo92wcm",
+        2: "https://mykadricdn.online/embed/shxbcr8c4zha",
+        3: "https://mykadricdn.online/embed/ftbhk1iy5e66",
+        4: "https://mykadricdn.online/embed/3lbkuwm6rcdc",
+        5: "https://mykadricdn.online/embed/mylo0wq9sui7",
+        6: "https://mykadricdn.online/embed/lnpoqlktdn9b",
+        7: "https://mykadricdn.online/embed/zv860cznnbd9",
+        8: "https://mykadricdn.online/embed/m4lk2ll0oef6",
       }
     };
   
