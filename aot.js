@@ -21,7 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
       9: "https://mykadricdn.online/v/fpfz46yloce6",
       10: "https://mykadricdn.online/v/4yw8msvq5rta",
       11: "https://mykadricdn.online/v/1n4qi3rthyvs",
-      12: "https://mykadricdn.online/v/ulnyqczgs9kj"
+      12: "https://mykadricdn.online/v/ulnyqczgs9kj",
+      13: "https://mykadricdn.online/v/6alpk7e6asdy", 
+      14: "https://mykadricdn.online/v/4x24jahjwnpj", 
+      15: "https://mykadricdn.online/v/epynydghwtez", 
+      16: "https://mykadricdn.online/v/4e40g0nqjg9c", 
+      17: "https://mykadricdn.online/v/ss4xyvsf1z11", 
+      18: "https://mykadricdn.online/v/zq9a4gs13olb", 
+      19: "https://mykadricdn.online/v/8jeutczba8wu", 
+      20: "https://mykadricdn.online/v/tiqmxxe365fn", 
+      21: "https://mykadricdn.online/v/1f4zgktgxfom", 
+      22: "https://mykadricdn.online/v/p0kyr33sa29a", 
+      23: "https://mykadricdn.online/v/akr217uujuye", 
+      24: "https://mykadricdn.online/v/nzjwjae9x205", 
+      25: "https://mykadricdn.online/v/o8ciba90fj32"
     },
     2: {
       1: "https://mykadricdn.online/v/568dkmstrztr",
