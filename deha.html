@@ -18,14 +18,14 @@
     crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Header -->
   <header class="main">
     <a href="index.html" id="name"><h2>QartuTv</h2></a>
   </header>
 
   <!-- Episode Section -->
   <section class="episode-container">
-    <!-- Left: Poster + Info -->
+    <!-- Left Side: Poster + Info -->
     <div class="episode-info">
       <h1 class="episode-title">გენიოსი / Deha</h1>
       <div class="poster-box">
@@ -37,19 +37,35 @@
       </div>
     </div>
 
-    <!-- Right: Video -->
+    <!-- Right Side: Video Player -->
     <div class="episode-player">
       <div class="player-wrapper">
-        <iframe id="iframedisplay"
-          src="https://vkvideo.ru/video_ext.php?oid=824626030&id=456239029&hd=2&autoplay=1"
-          allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-          frameborder="0" allowfullscreen>
-        </iframe>
+        <iframe
+             id="iframedisplay"
+             width="560"
+             height="315"
+             src="https://vkvideo.ru/video_ext.php?oid=824626030&id=456239029&hd=2&autoplay=1"
+             frameborder="0"
+             allowfullscreen
+            ></iframe>
 
-        <select class="episode-select overlay" id="seriesSelector">
-          <option value="1" selected>სერია 1</option>
-          <!-- Add more episodes here -->
-        </select>
+            <div class="custom-dropdowns">
+              <!-- Season Selector -->
+              <div class="custom-dropdown overlay" id="seasonDropdown">
+                <button class="dropdown-button" id="seasonToggle">აირჩიე სეზონი</button>
+                <ul class="dropdown-list" id="seasonList">
+                  <li data-season="1">სეზონი 1</li>
+                </ul>
+              </div>
+            
+              <!-- Episode Selector -->
+              <div class="custom-dropdown overlay" id="episodeDropdown">
+                <button class="dropdown-button" id="episodeToggle">აირჩიე სერია</button>
+                <ul class="dropdown-list" id="episodeList">
+                  <!-- Episodes will be injected here dynamically -->
+                </ul>
+              </div>
+            </div>
       </div>
     </div>
   </section>
@@ -60,5 +76,6 @@
     <p><a href="index.html">მთავარი გვერდი</a></p>
     <a href="https://www.facebook.com/profile.php?id=61578551435104" class="facebook-link">Facebook</a>
   </footer>
+  <script src="deha.js"></script>
 </body>
 </html>

@@ -1,18 +1,23 @@
-/* Reset and Base Styles */
-* {
+/* Base Styling */
+body {
+  background-color: #1c1c1c;
+  margin: 0;
+  padding: 0;
+  color: antiquewhite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  background-color: #1c1c1c;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: antiquewhite;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
+}
+
+html {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -34,18 +39,17 @@ html, body {
 #name h2 {
   text-decoration: none;
 }
-
-/* Layout Container */
+/* Main Layout */
 .episode-container {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
   padding: 40px 20px;
+  gap: 40px;
 }
 
-/* Poster + Info */
+/* Left: Poster + Info */
 .episode-info {
   max-width: 300px;
   text-align: center;
@@ -88,7 +92,7 @@ html, body {
   box-shadow: 0 0 5px rgba(255, 255, 0, 0.7);
 }
 
-/* Player */
+/* Right: Video Player */
 .episode-player {
   flex: 1;
   min-width: 300px;
@@ -98,26 +102,24 @@ html, body {
   align-items: center;
 }
 
-.player-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
-}
-
-.player-wrapper iframe {
+iframe {
   width: 100%;
   height: 540px;
   border-radius: 12px;
   box-shadow: 0 0 25px black;
-  display: block;
-  margin: 0 auto;
 }
 
-/* Episode Selector (overlay) */
-.episode-select.overlay {
+.custom-dropdowns {
   position: absolute;
   top: 15px;
   right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.dropdown-button {
   background-color: yellow;
   color: black;
   font-weight: bold;
@@ -125,17 +127,60 @@ html, body {
   padding: 6px 12px;
   border-radius: 12px;
   border: none;
-  box-shadow: 0 0 8px rgba(255, 255, 0, 0.7);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 0, 0.7);
+}
+.dropdown-list::-webkit-scrollbar {
+  width: 8px;
+  color: rgb(255, 255, 0);
+}
+.dropdown-list::-webkit-scrollbar-track {
+  background: #333; /* dark background */
+  border-radius: 10px;
+}
+.dropdown-list::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 10px;
+  border: 2px solid #333; /* optional border for contrast */
 }
 
-.episode-select.overlay:hover {
-  transform: scale(1.05);
+.dropdown-list {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  background-color: yellow;
+  color: black;
+  list-style: none;
+  padding: 0;
+  border-radius: 12px;
+  max-height: 160px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+  width: 150px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(75, 75, 0) #333;
+}
+
+.dropdown-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-list li:hover {
+  background-color: black;
+  color: yellow;
+}
+
+.player-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
 }
 
 /* Footer */
-.footer {
+footer.footer {
   width: 100%;
   background-color: #1f1f1f;
   color: antiquewhite;
@@ -144,17 +189,16 @@ html, body {
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
-  margin-top: auto;
 }
 
-.footer a {
+footer a {
   color: yellow;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease;
 }
 
-.footer a:hover {
+footer a:hover {
   text-decoration: underline;
   color: white;
 }
@@ -173,19 +217,14 @@ html, body {
   text-shadow: 2px 2px 10px#1877f2;
 }
 
-/* Responsive Mobile */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .episode-container {
     flex-direction: column;
     align-items: center;
-    padding: 20px 15px;
   }
 
-  .episode-title {
-    font-size: 20px;
-  }
-
-  .player-wrapper iframe {
+  iframe {
     height: 250px;
   }
 
@@ -195,4 +234,53 @@ html, body {
     top: 10px;
     right: 10px;
   }
+
+  .poster-box img {
+    width: 80%;
+  }
+
+  .episode-title {
+    font-size: 22px;
+  }
 }
+
+@media (max-width: 768px) {
+  .custom-dropdowns {
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  .dropdown-button {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: 120px;
+  }
+
+  .dropdown-list {
+    width: 120px;
+    font-size: 13px;
+    max-height: 120px;
+  }
+
+  .dropdown-list li {
+    padding: 6px 10px;
+  }
+
+  /* Smaller scrollbar for mobile */
+  .dropdown-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .dropdown-list::-webkit-scrollbar-thumb {
+    background-color: yellow;
+    border-radius: 6px;
+  }
+
+  .dropdown-list::-webkit-scrollbar-track {
+    background-color: #222;
+  }
+}
+
