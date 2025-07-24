@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         2: "https://video.sibnet.ru/shell.php?videoid=5847727",
         3: "https://video.sibnet.ru/shell.php?videoid=5849217",
         4: "https://video.sibnet.ru/shell.php?videoid=5850608",
-        5: "https://video.sibnet.ru/shell.php?videoid=5852393"
+        5: "https://video.sibnet.ru/shell.php?videoid=5852393",
+        6: "https://video.sibnet.ru/shell.php?videoid=5852396",
+        7: "https://video.sibnet.ru/shell.php?videoid=5856556",
       }
     };
   
