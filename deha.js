@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
       1: {
         1: "https://vkvideo.ru/video_ext.php?oid=824626030&id=456239029&hd=2&autoplay=1",
         2: "https://video.sibnet.ru/shell.php?videoid=5847727",
-        3: "https://video.sibnet.ru/shell.php?videoid=5849217"
+        3: "https://video.sibnet.ru/shell.php?videoid=5849217",
+        4: "https://video.sibnet.ru/shell.php?videoid=5850608",
+        5: "https://video.sibnet.ru/shell.php?videoid=5852393"
       }
     };
   
