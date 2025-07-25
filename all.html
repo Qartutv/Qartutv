@@ -25,15 +25,6 @@
   <header class="main-header">
     <div class="container header-flex">
       <a href="index.html" id="site-name">QartuTv</a>
-      <div class="dropdown">
-        <button class="dropbtn">კატეგორიები</button>
-        <div class="dropdown-content">
-          <a href="all.html">ყველა</a>
-          <a href="index.html">სერიალები</a>
-          <a href="index.html">ანიმეები</a>
-          <!-- You can add more links here later -->
-        </div>
-      </div>
     </div>
   </header>
   <main class="container">
@@ -41,9 +32,9 @@
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="ძიება სერიალების ან ანიმეების..." />
     </div>
-
-  <section class="section" id="series">
-    <h2 class="section-title">📺 სერიალები</h2>
+    <div id="noResults" style="display:none; text-align:center; margin-top:20px; font-size:18px; color:#999;">
+        შედეგი არ მოიძებნა.
+      </div>
     <div class="card-grid" id="seriesGrid">
       <a href="gaddar.html" class="card" data-title="gaddar">
         <span class="card-year">2024</span>
@@ -73,12 +64,6 @@
         <img src="https://adjaranets.to/uploads/posts/2024-10/kalmaris-tamashi-sezoni-2-qartulad.webp" alt="Squid game სერიალი" />
         <span class="card-title">Squid game</span>
       </a>
-    </div>
-  </section>
-
-  <section class="section" id="anime">
-    <h2 class="section-title">🎥 ანიმეები</h2>
-    <div class="card-grid">
       <a href="aot.html" class="card" data-title="attack on titan aot">
           <span class="card-year">2013</span>
           <span class="card-count">59 / 94</span> 
@@ -133,36 +118,25 @@
   </footer>
   <script>
     const searchInput = document.getElementById('searchInput');
-    const allSections = document.querySelectorAll('.section');
+    const seriesGrid = document.getElementById('seriesGrid');
+    const cards = seriesGrid.querySelectorAll('.card');
+    const noResults = document.getElementById('noResults');
   
     searchInput.addEventListener('input', function () {
       const query = this.value.toLowerCase().trim();
-      let totalVisible = 0; // Track if anything at all matches
+      let visibleCount = 0;
   
-      allSections.forEach(section => {
-        const cards = section.querySelectorAll('.card');
-        let visibleCount = 0;
-  
-        cards.forEach(card => {
-          const title = card.getAttribute('data-title')?.toLowerCase() || '';
-          if (title.includes(query)) {
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title')?.toLowerCase() || '';
+        if (title.includes(query)) {
             card.style.display = ''; // Let CSS handle it
             visibleCount++;
           } else {
             card.style.display = 'none';
           }
-        });
-  
-        // Show or hide section based on how many cards matched
-        section.style.display = visibleCount > 0 ? 'block' : 'none';
-        totalVisible += visibleCount;
       });
   
-      // Optional: "No results found" message
-      const noResults = document.getElementById('noResults');
-      if (noResults) {
-        noResults.style.display = totalVisible === 0 ? 'block' : 'none';
-      }
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     });
   </script>
   
