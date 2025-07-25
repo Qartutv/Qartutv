@@ -19,6 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
         7: "https://adjaranets.xyz/video/41e7637e7b6a9f27a98b84d3a185c7c0",
         8: "https://adjaranets.xyz/video/bd0cc810b580b35884bd9df37c0e8b0f",
         9: "https://adjaranets.xyz/video/88a839f2f6f1427879fc33ee4acf4f66"
+      },
+      2: {
+        1: "https://adjaranets.xyz/video/1843e35d41ccf6e63273495ba42df3c1",
+        2: "https://adjaranets.xyz/video/32b991e5d77ad140559ffb95522992d0",
+        3: "https://adjaranets.xyz/video/227f6afd3b7f89b96c4bb91f95d50f6d",
+        4: "https://adjaranets.xyz/video/182e6c2d3d78eef40e5dac7da77a748f",
+        5: "https://adjaranets.xyz/video/28acfe2da49d2b9a7f177458256f2540",
+        6: "https://adjaranets.xyz/video/aee92f16efd522b9326c25cc3237ac15",
+        7: "https://adjaranets.xyz/video/0172d289da48c48de8c5ebf3de9f7ee1"
+      },
+      3: {
+        1: "https://adjaranets.xyz/video/55b34fd73727d9b19698835c7d5302ae",
+        2: "https://adjaranets.xyz/video/b5507f51b88a3ae4a99ba87e4877ab57",
+        3: "https://adjaranets.xyz/video/df7ee89b6f8ec5827a19ecbaff5d4cd2",
+        4: "https://adjaranets.xyz/video/ac8a9143597891fc2fc2ded41a9a9ec7",
+        5: "https://adjaranets.xyz/video/ec1093fe1626f25b1845d04dd6f55dd2",
+        6: "https://adjaranets.xyz/video/e334fd9dac68f13fa1a57796148cf812",
       }
     };
   
